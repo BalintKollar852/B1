@@ -1,6 +1,7 @@
 from n_mygameworld import *
 from n_menu_menustage import *
 
+
 class GameStage(MyStage):
 
     def back(self, pos, btn):
@@ -11,9 +12,44 @@ class GameStage(MyStage):
 
     def __init__(self, menu: 'Menustage'):
         super().__init__()
-        self.m: MyActor = MyActor("m_jerry.png", pos=(300, 300), anchor=(0, 0))
-        self.m.set_on_mouse_down_listener(self.back)
+
+        self.m7: MyActor = MyActor("ctl10.png", pos=(350, 225), anchor=(0, 0))
+        self.add_actor(self.m7)
+        self.menu: Menustage = menu
+
+        self.m6: MyActor = MyActor("ctl9.png", pos=(350, 225), anchor=(0, 0))
+        self.add_actor(self.m6)
+        self.menu: Menustage = menu
+
+
+        self.m5: MyActor = MyActor("ctl8.png", pos=(350, 225), anchor=(0, 0))
+        self.add_actor(self.m5)
+        self.menu: Menustage = menu
+
+
+        self.m3: MyActor = MyActor("clt6.png", pos=(350, 225), anchor=(0, 0))
+        self.add_actor(self.m3)
+        self.menu: Menustage = menu
+
+        self.m4: MyActor = MyActor("ctl7.png", pos=(350, 225), anchor=(0, 0))
+        self.add_actor(self.m4)
+        self.menu: Menustage = menu
+
+
+        self.m: MyActor = MyActor("cross.png", pos=(300, 300), anchor=(0, 0))
         self.add_actor(self.m)
         self.menu: Menustage = menu
         self.set_on_mouse_down_listener(self.jerrymove)
+
+        self.m2: MyActor = MyActor("backr.png", pos=(0, 0), anchor=(0, 0))
+        self.add_actor(self.m2)
+        self.menu: Menustage = menu
+
+
+
+
+
+
+
+
 
