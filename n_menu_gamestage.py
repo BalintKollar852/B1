@@ -1,5 +1,8 @@
+import random
+from turtle import Turtle
 from n_mygameworld import *
 from n_menu_menustage import *
+
 
 
 class GameStage(MyStage):
@@ -8,7 +11,9 @@ class GameStage(MyStage):
         self.menu.menu_Main()
 
     def jerrymove(self, pos, btn):
-        animate(self.m, pos=pos)
+        animate(self.m, pos = pos)
+        animate(self.m, pos = pos)
+
 
     def __init__(self, menu: 'Menustage'):
         super().__init__()
@@ -42,11 +47,9 @@ class GameStage(MyStage):
         self.set_on_mouse_down_listener(self.jerrymove)
 
         self.m2: MyActor = MyActor("backr.png", pos=(0, 0), anchor=(0, 0))
+        self.m2.set_on_mouse_down_listener(self.back)
         self.add_actor(self.m2)
         self.menu: Menustage = menu
-
-
-
 
 
 

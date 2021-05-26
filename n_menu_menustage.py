@@ -5,7 +5,6 @@ from n_menu_gamestage import *
 import pgzrun
 import pygame
 
-TITLE = "Hello World"
 
 WIDTH  = 950
 HEIGHT = 750
