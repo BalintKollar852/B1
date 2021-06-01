@@ -1,6 +1,11 @@
+from _tracemalloc import start, stop
+
+import numpy as np
+
 from n_mygameworld import *
 from n_menu_menustage import *
 from n_menu_gamestage import *
+
 
 
 

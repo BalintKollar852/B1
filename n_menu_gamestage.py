@@ -51,7 +51,7 @@ class GameStage(MyStage):
         self.add_actor(self.m2)
         self.menu: Menustage = menu
 
-        self.m8: MyActor = MyActor("hitp.png", pos=(300, 300), anchor=(0, 0))
+        self.m8: MyActor = MyActor("hit.png", pos=(300, 300), anchor=(0, 0))
         self.add_actor(self.m8)
         self.menu: Menustage = menu
         self.set_on_mouse_down_listener(self.jerrymove)
