@@ -16,7 +16,6 @@ Sair = True
 
 while Sair:
 
-
     for event in pygame.event.get():
         if event.type == pygame.QUIT: Sair=False
     ballrect = ballrect.move(speed)
@@ -51,7 +50,6 @@ while Sair:
         screen.fill(black)
         screen.blit(ball, ballrect)
         pygame.display.flip()
-
 
         def __init__(self, menu: 'Menustage'):
             super().__init__()
