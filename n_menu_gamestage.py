@@ -3,7 +3,7 @@ from turtle import Turtle
 from n_mygameworld import *
 from n_menu_menustage import *
 import sys, pygame
-import test
+
 
 
 
@@ -18,12 +18,17 @@ class GameStage(MyStage):
         size = width, height = 800, 600
         black = 0, 0, 0
 
+        screen = pygame.display.set_mode(size)
+
+        ball = pygame.image.load("cross.png")
         ballrect = ball.get_rect()
 
         Sair = True
 
         while Sair:
 
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT: Sair = False
             ballrect = ballrect.move(speed)
             if ballrect.left < 0 or ballrect.right > width:
                 speed[0] = -speed[0]
@@ -38,6 +43,8 @@ class GameStage(MyStage):
             pos = [0, 0]
             while Sair:
 
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT: Sair = False
 
                 if ballrect.left < 0 or ballrect.right > width:
                     x = random.uniform(0.1, 1)
@@ -53,7 +60,7 @@ class GameStage(MyStage):
 
                 screen.fill(black)
                 screen.blit(ball, ballrect)
-                pygame.display.flip()
+
 
 
     def __init__(self, menu: 'Menustage'):
@@ -95,7 +102,7 @@ class GameStage(MyStage):
         self.m8: MyActor = MyActor("hit.png", pos=(300, 300), anchor=(0, 0))
         self.add_actor(self.m8)
         self.menu: Menustage = menu
-        self.set_on_mouse_down_listener(self.jerrymove)
+
 
 
 
