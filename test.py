@@ -6,6 +6,7 @@ import self as self
 from n_menu_menustage import Menustage
 from n_mygameworld import MyActor
 
+
 pygame.init()
 
 x=0.5
@@ -92,6 +93,7 @@ while Sair:
             self.menu: Menustage = menu
 
             self.m8: MyActor = MyActor("hit.png", pos=(300, 300), anchor=(0, 0))
+            self.m2.set_on_key_down_listener(self.back)
             self.add_actor(self.m8)
             self.menu: Menustage = menu
 
