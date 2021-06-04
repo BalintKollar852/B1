@@ -1,5 +1,11 @@
 import sys, pygame
 import random
+
+import self as self
+
+from n_menu_menustage import Menustage
+from n_mygameworld import MyActor
+
 pygame.init()
 
 x=0.5
@@ -9,13 +15,13 @@ black = 0, 0, 0
 
 screen = pygame.display.set_mode(size)
 
-ball = pygame.image.load("ct.png")
+ball = pygame.image.load("cross.png")
 ballrect = ball.get_rect()
+
 
 Sair = True
 
 while Sair:
-
     for event in pygame.event.get():
         if event.type == pygame.QUIT: Sair=False
     ballrect = ballrect.move(speed)
@@ -51,6 +57,7 @@ while Sair:
         screen.blit(ball, ballrect)
         pygame.display.flip()
 
+
         def __init__(self, menu: 'Menustage'):
             super().__init__()
 
@@ -66,11 +73,11 @@ while Sair:
             self.add_actor(self.m5)
             self.menu: Menustage = menu
 
-            self.m3: MyActor = MyActor("clt6.png", pos=(350, 225), anchor=(0, 0))
+            self.m3: MyActor = MyActor("clt7.png", pos=(350, 225), anchor=(0, 0))
             self.add_actor(self.m3)
             self.menu: Menustage = menu
 
-            self.m4: MyActor = MyActor("ctl7.png", pos=(350, 225), anchor=(0, 0))
+            self.m4: MyActor = MyActor("ctl6.png", pos=(350, 225), anchor=(0, 0))
             self.add_actor(self.m4)
             self.menu: Menustage = menu
 
@@ -87,5 +94,6 @@ while Sair:
             self.m8: MyActor = MyActor("hit.png", pos=(300, 300), anchor=(0, 0))
             self.add_actor(self.m8)
             self.menu: Menustage = menu
+
 
 sys.exit()

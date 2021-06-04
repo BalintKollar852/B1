@@ -1,8 +1,6 @@
-import pgzrun
 from typing import List
 import pygame
 from pgzero.builtins import *
-
 
 class MyActor(Actor):
 

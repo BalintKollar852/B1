@@ -5,7 +5,6 @@ from n_menu_menustage import *
 import sys, pygame
 
 class GameStage(MyStage):
-
     def back(self, pos, btn):
         self.menu.menu_Main()
 
@@ -52,13 +51,11 @@ class GameStage(MyStage):
                 pos[0] += speed[0]
                 pos[1] += speed[1]
                 ballrect.topleft = (int(pos[0]), int(pos[1]))
-
                 screen.fill(black)
                 screen.blit(ball, ballrect)
 
     def __init__(self, menu: 'Menustage'):
         super().__init__()
-
         self.m7: MyActor = MyActor("ctl10.png", pos=(350, 225), anchor=(0, 0))
         self.add_actor(self.m7)
         self.menu: Menustage = menu
@@ -66,7 +63,6 @@ class GameStage(MyStage):
         self.m6: MyActor = MyActor("ctl9.png", pos=(350, 225), anchor=(0, 0))
         self.add_actor(self.m6)
         self.menu: Menustage = menu
-
 
         self.m5: MyActor = MyActor("ctl8.png", pos=(350, 225), anchor=(0, 0))
         self.add_actor(self.m5)
@@ -93,3 +89,4 @@ class GameStage(MyStage):
         self.m8: MyActor = MyActor("hit.png", pos=(300, 300), anchor=(0, 0))
         self.add_actor(self.m8)
         self.menu: Menustage = menu
+        self.set_on_mouse_down_listener(self.jerrymove)
