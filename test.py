@@ -59,6 +59,9 @@ while Sair:
         pygame.display.flip()
 
 
+
+
+
         def __init__(self, menu: 'Menustage'):
             super().__init__()
 
