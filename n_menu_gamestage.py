@@ -17,12 +17,8 @@ class GameStage(MyStage):
     def click(self, pos, button):
         pass
 
-
-
-
     def __init__(self, menu: 'Menustage'):
         super().__init__()
-
 
 
         self.m7: MyActor = MyActor("ctl10.png", pos=(350, 225), anchor=(0, 0))
@@ -33,11 +29,9 @@ class GameStage(MyStage):
         self.add_actor(self.m6)
         self.menu: Menustage = menu
 
-
         self.m5: MyActor = MyActor("ctl8.png", pos=(350, 225), anchor=(0, 0))
         self.add_actor(self.m5)
         self.menu: Menustage = menu
-
 
         self.m3: MyActor = MyActor("clt6.png", pos=(350, 225), anchor=(0, 0))
         self.add_actor(self.m3)
@@ -46,7 +40,6 @@ class GameStage(MyStage):
         self.m4: MyActor = MyActor("ctl7.png", pos=(350, 225), anchor=(0, 0))
         self.add_actor(self.m4)
         self.menu: Menustage = menu
-
 
         self.cross: MyActor = MyActor("cross.png", pos=(350, 300), anchor=(0, 0))
         self.add_actor(self.cross)
@@ -61,12 +54,3 @@ class GameStage(MyStage):
         self.t : MyTickTimer = MyTickTimer(func=self.crossmove, interval=1)
         self.add_timer(self.t)
         self.crossmove()
-
-
-
-
-
-
-
-
-
